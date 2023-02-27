@@ -14,6 +14,7 @@ public class son {
         }
         sum+=i;
         printsum(i + 1, n, sum);
+        //System.out.println(i);
 
     }
 }

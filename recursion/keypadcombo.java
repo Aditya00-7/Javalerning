@@ -15,7 +15,7 @@ public class keypadcombo {public static String keypad[] = {".", "abc", "def", "g
         }
     }
     public static void main(String args[]) {
-        String number = "44";
+        String number = "4490";
         printKeypadCombination(number, 0, "");
     }
 }

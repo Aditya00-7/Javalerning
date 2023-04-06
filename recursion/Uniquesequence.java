@@ -20,7 +20,7 @@ public class Uniquesequence {public static void printSubseq(String str, int idx,
 }
     public static void main(String args[]) {
         String str1 = "abc";
-        String str2 = "aaa";
+        String str2 = "aaaa";
         HashSet<String> allSubseq = new HashSet<>();
         printSubseq(str2, 0, "", allSubseq);
     }

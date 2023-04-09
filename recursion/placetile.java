@@ -2,7 +2,7 @@ package recursion;
 
 public class placetile {
     public static void main(String args[]) {
-        int n = 4, m = 2;
+        int n = 9, m = 6;
         System.out.println(placeTiles(n, m));
     }
 

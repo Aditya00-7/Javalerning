@@ -31,13 +31,11 @@ public class MergeSort {
        } 
     
     public static void main(String args[]){
-        int arr [] ={6,3,9,8,2,5};
+        int arr [] ={6,3,9,0,8,1,2,5};
         int n =arr.length;
         divide(arr, 0, n-1);
         divide(arr,0,n-1);
-        for (int i=0;i<=n;i++){
-            System.out.print(arr[i]+" ");
-        }
+        for (int i=0;i<=n;i++) System.out.print(arr[i] + " ");
         System.out.println();
     }
 }

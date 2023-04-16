@@ -6,7 +6,7 @@ public class Quicksort {
         int i =low-1;
 
         for (int j =low; j<high; j++){
-            if (arr[j]<pivot){
+            if (arr[j]< pivot){
               i++;
               //swap
               int temp =arr[i];
@@ -14,17 +14,18 @@ public class Quicksort {
               arr[j]= temp;
             }
         }
+        //swap with pivot
         i++;
         int temp =arr[i];
         arr[i]=pivot;
         arr[high]= temp;
-        return i;
+        return i+1;
     }
     public static void quicksort(int arr[],int low, int high){
         if (low <high){
             int pidx  =partition(arr,low,high);
             quicksort(arr,low,pidx-1);
-            quicksort(arr, pidx-1, high);
+            quicksort(arr, pidx+1, high);
         }
     }
     public static void main(String args[]){
@@ -33,7 +34,7 @@ public class Quicksort {
         quicksort(arr, 0,n-1);
 
         for (int i=0;i<n;i++){
-            System.out.println(arr[i]+" ");
+            System.out.print(arr[i]+" ");
         }
         System.out.println();
     }

@@ -22,6 +22,12 @@ public class firstprogram {
             System.out.println(this.name);
             System.out.println(this.age);
         }
+        Student(String name,int age){
+       // non parametrized constructor   // System.out.println("Constructor called");
+            // parametrized constructor
+            this.age=age;
+            this.name=name;
+        }
     }
 
     public static void main(String[] args) {
@@ -35,9 +41,13 @@ public class firstprogram {
         pen1.printcolor();
         pen2.printcolor();
        }*/
-        Student s1 = new Student();
+       /* non parametrized constructor
+       Student s1 = new Student();
         s1.name = "aman";
         s1.age = 24;
+        s1.printinfo();*/
+        //parametrized constructor
+        Student s1 =new Student("Aman",24);
         s1.printinfo();
     }
 }

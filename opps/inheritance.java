@@ -1,5 +1,5 @@
 package opps;
-import opps.bank.bank;
+/*import opps.bank;
 class Shape{
     String color;
     public void area(){
@@ -27,3 +27,4 @@ public class inheritance {
         t1.color="red";
     }
 }
+*/

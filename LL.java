@@ -50,6 +50,10 @@ public class LL {
         list.addfirst("a");
         list.addfirst("is");
         list.printlist();
+        list.addlast("list");
+        list.printlist();
+        list.addfirst("this");
+        list.printlist();
 
     }
 

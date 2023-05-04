@@ -1,4 +1,9 @@
+import java.util.*;
 public class LL {
+    private int size;
+    LL(){
+        this.size =0;
+    }
     Node head;
     class Node{
         String data;
@@ -7,6 +12,7 @@ public class LL {
         Node(String data){
             this.data = data;
             this.next= null;
+            size++;
         }
     }
     //add first ,last
@@ -45,7 +51,40 @@ public class LL {
         }
         System.out.println(" NULL");
     }
-        public static void main(String args[]){
+
+    //delete first
+    public void deletefirst(){
+      if (head == null){
+          System.out.println("The list is empty");
+          return;
+      }
+      size--;
+      head =head.next;
+    }
+    //delete last
+    public void deletelast() {
+        if (head == null) {
+            System.out.println("The list is empty");
+            return;
+        }
+        size--;
+        if(head.next ==null) {
+           head= null;
+           return;
+        }
+        Node secondlast =head;
+        Node lastNode =head.next;
+        while(lastNode.next != null){
+            lastNode = lastNode.next;
+            secondlast = secondlast.next;
+        }
+        secondlast.next= null;
+    }
+    public int getSize(){
+     return size;
+    }
+
+    public static void main(String args[]){
         LL list = new LL();
         list.addfirst("a");
         list.addfirst("is");
@@ -54,7 +93,15 @@ public class LL {
         list.printlist();
         list.addfirst("this");
         list.printlist();
-
+        list.deletefirst();
+        list.printlist();
+        list.deletelast();
+        list.printlist();
+        list.getSize();
+        System.out.println(list.getSize());
+        list.addfirst("this");
+        list.printlist();
+        System.out.println(list.getSize());
     }
 
 }

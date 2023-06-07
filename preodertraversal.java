@@ -31,6 +31,14 @@ public class preodertraversal {
         preorder(root.right);
         return 0;
     }
+    public static int countofNodes(Node root){
+        if(root == null){
+            return 0;
+        }
+        int leftNodes = countofNodes(root.left);
+        int rightNodes=countofNodes(root.right);
+        return leftNodes+rightNodes+1;
+    }
 
 
     public static void main(String args[]){
@@ -38,6 +46,7 @@ public class preodertraversal {
         Binarytree.BinaryTree tree= new Binarytree.BinaryTree();
         Node root = tree.buildTree(nodes);
         //System.out.println(root.data);
-        preorder(root);
+      //  preorder(root);
+        System.out.println(countofNodes(root));
     }
 }

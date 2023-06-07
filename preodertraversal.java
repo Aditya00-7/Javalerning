@@ -47,6 +47,16 @@ public class preodertraversal {
         int rightsum = sumofnode(root.right);
         return leftsum+ rightsum+ root.data;
     }
+    public static int heightoftree(Node root){
+        if (root == null){
+            return 0;
+        }
+        int leftheight = heightoftree(root.left);
+        int righthright= heightoftree(root.right);
+
+        int myheight = Math.max(leftheight,righthright)+1;
+        return myheight;
+    }
 
 
     public static void main(String args[]){
@@ -56,6 +66,7 @@ public class preodertraversal {
         //System.out.println(root.data);
       //  preorder(root);
        // System.out.println(countofNodes(root));
-        System.out.println(sumofnode(root));
+       // System.out.println(sumofnode(root));
+        System.out.println(heightoftree(root));
     }
 }

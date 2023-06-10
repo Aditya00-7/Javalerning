@@ -57,6 +57,20 @@ public class preodertraversal {
         int myheight = Math.max(leftheight,righthright)+1;
         return myheight;
     }
+    //approch 1
+    public static int  diameter(Node root){
+        if (root ==null){
+            return 0;
+        }
+        int diam1 =diameter(root.left);
+        int diam2 =diameter(root.right);
+        int diam3 =heightoftree(root.left)+heightoftree(root.right)+1;
+        return  Math.max(diam3,Math.max(diam1,diam2));
+    }
+    //Approch 2
+    static class TreeInfo{
+        int ht
+    }
 
 
     public static void main(String args[]){
@@ -67,6 +81,8 @@ public class preodertraversal {
       //  preorder(root);
        // System.out.println(countofNodes(root));
        // System.out.println(sumofnode(root));
-        System.out.println(heightoftree(root));
+       // System.out.println(heightoftree(root));
+        // approach 1 to calculate diameter
+        System.out.println(diameter(root));
     }
 }

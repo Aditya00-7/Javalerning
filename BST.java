@@ -29,8 +29,24 @@ public class BST {
         System.out.print(root.data+" ");
         inorder(root.right);
     }
+    //searching in tree
+    public static boolean search(Node root,int key){
+        if (root == null) {
+            return false;
+        }
+        if (root.data>key){//left subtree
+            return search(root.left,key);
+        }
+        else if (root.data ==key) {
+            return true;
 
-    public static void main(String args[]){
+        } else {
+            return search(root.right,key);
+        }
+    }
+
+
+        public static void main(String args[]){
         int values[]= {5,1,3,4,2,7};
                 Node root = null;
                 for (int i=0; i<values.length; i++){
@@ -38,5 +54,11 @@ public class BST {
                 }
                 inorder(root);
         System.out.println();
+        if(search(root,2)){
+            System.out.println("found");
+        }
+        else{
+            System.out.println("Not Found");
+        }
     }
 }
